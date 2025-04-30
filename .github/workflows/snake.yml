@@ -15,8 +15,8 @@ jobs:
           github_user_name: SalmaSamyM
           outputs: |
             dist/github-contribution-grid-snake.svg
-          color_snake: "#FF6EC7"
-          color_dots: "#FFD700,#FF6EC7,#FF69B4,#800080"
+          color_snake: "#FF00FF"
+          color_dots: "#8A2BE2,#FF69B4,#BA55D3,#DA70D6"
           
       - name: Push snake animation to output branch
         uses: crazy-max/ghaction-github-pages@v3
