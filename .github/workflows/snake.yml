@@ -2,21 +2,23 @@ name: Generate Snake Contribution Animation
 
 on:
   schedule:
-    - cron: "0 0 * * *" # every day at midnight
+    - cron: "0 0 * * *"
   workflow_dispatch:
 
 jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
-      - name: Generate Snake Animation
+      - name: Generate Snake Game
         uses: Platane/snk@v3
         with:
           github_user_name: SalmaSamyM
           outputs: |
             dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-      - name: Push generated snake svg to the output branch
+          color_snake: "#FF6EC7"
+          color_dots: "#FFD700,#FF6EC7,#FF69B4,#800080"
+          
+      - name: Push snake animation to output branch
         uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: output
